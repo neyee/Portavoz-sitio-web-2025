@@ -1,0 +1,34 @@
+# templates/podcast.html (Página de podcasts)
+{% extends 'layout.html' %}
+
+{% block title %}Podcast - Portavoz Cantaura{% endblock %}
+
+{% block content %}
+    <section class="podcasts-page">
+        <h2>Nuestros Podcast</h2>
+        <div class="podcasts-grid">
+            <article class="podcast-item">
+                <img src="{{ url_for('serve_static', filename='images/podcast1.jpg') }}" alt="Podcast 1">
+                <h3>Título del Podcast 1</h3>
+                <p>Descripción del podcast 1...</p>
+                <div class="audio-player">
+                    <audio controls>
+                        <source src="URL_DEL_ARCHIVO_DE_AUDIO_1" type="audio/mpeg">
+                        Tu navegador no soporta la reproducción de audio.
+                    </audio>
+                </div>
+            </article>
+            <article class="podcast-item">
+                <img src="{{ url_for('serve_static', filename='images/podcast2.jpg') }}" alt="Podcast 2">
+                <h3>Título del Podcast 2</h3>
+                <p>Descripción del podcast 2...</p>
+                <div class="audio-player">
+                    <audio controls>
+                        <source src="URL_DEL_ARCHIVO_DE_AUDIO_2" type="audio/mpeg">
+                        Tu navegador no soporta la reproducción de audio.
+                    </audio>
+                </div>
+            </article>
+        </div>
+    </section>
+{% endblock %}
