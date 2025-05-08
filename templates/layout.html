@@ -1,0 +1,40 @@
+# templates/layout.html (Plantilla base)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portavoz Cantaura{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('serve_static', filename='images/logo.png') }}" alt="Logo Portavoz Cantaura">
+            <h1>Portavoz Cantaura</h1>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="/noticias"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                <li><a href="/temas"><i class="fas fa-microphone"></i> Temas</a></li>
+                <li><a href="/descargas"><i class="fas fa-download"></i> Descargas</a></li>
+                <li><a href="/podcast"><i class="fas fa-podcast"></i> Podcast</a></li>
+                <li><a href="/youtube"><i class="fab fa-youtube"></i> YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portavoz Cantaura. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
