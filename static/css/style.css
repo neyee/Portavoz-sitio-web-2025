@@ -1,0 +1,438 @@
+/* static/css/style.css (Archivo de estilos CSS) */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #181818;
+    color: #eee;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 75px; /* Ajusta el tamaño del logo */
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: #333;
+    padding: 0.5em 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.2em;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/* Estilos para el menú responsivo */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #eee;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ ul {
+    display: block;
+}
+
+main {
+    padding: 2em;
+    min-height: 60vh; /* Ajusta la altura mínima del main */
+}
+
+footer {
+    background-color: #222;
+    padding: 1em;
+    text-align: center;
+    color: #aaa;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Estilos para la página principal */
+#player {
+    background-color: #282828;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#player h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+    color: #ddd;
+}
+
+.player-container audio {
+    width: 100%;
+}
+
+.player-container .playing-now {
+    font-style: italic;
+    color: #aaa;
+}
+
+#destacados {
+    margin-bottom: 2em;
+}
+
+#destacados h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+    color: #ddd;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.news-item {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-item h3 {
+    font-size: 1.2em;
+    margin: 0.8em 0;
+    padding: 0 1em;
+    color: #eee;
+}
+
+.news-item p {
+    padding: 0 1em;
+    color: #ccc;
+}
+
+.news-item .read-more {
+    display: block;
+    padding: 0.8em 1em;
+    background-color: #333;
+    color: #eee;
+    text-decoration: none;
+    text-align: right;
+    border-top: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.news-item .read-more:hover {
+    background-color: #444;
+}
+
+.news-item .read-more i {
+    margin-left: 0.5em;
+}
+
+/* Estilos para la página de noticias */
+.news-page {
+    margin-bottom: 2em;
+}
+
+.news-page h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+    color: #ddd;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.news-article {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.news-article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.news-article h3 {
+    font-size: 1.2em;
+    margin: 0.8em 0;
+    padding: 0 1em;
+    color: #eee;
+}
+
+.news-article p {
+    padding: 0 1em;
+    color: #ccc;
+}
+
+.news-article .date {
+    display: block;
+    padding: 0.8em 1em;
+    background-color: #333;
+    color: #aaa;
+    border-top: 1px solid #444;
+    font-size: 0.85em;
+}
+
+.news-article .date i {
+    margin-right: 0.5em;
+}
+
+/* Estilos para la página de temas */
+.topics-page {
+    margin-bottom: 2em;
+}
+
+.topics-page h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+    color: #ddd;
+}
+
+.topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topics-list li {
+    background-color: #222;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    padding: 0.8em 1em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.topics-list li:hover {
+    transform: translateX(5px);
+}
+
+.topics-list li a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.topics-list li i {
+    margin-right: 0.8em;
+    color: #aaa;
+}
+
+/* Estilos para la página de descargas */
+.downloads-page {
+    margin-bottom: 2em;
+}
+
+.downloads-page h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+    color: #ddd;
+}
+
+.downloads-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.downloads-list li {
+    background-color: #222;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    padding: 0.8em 1em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.downloads-list li a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.downloads-list li i {
+    margin-right: 0.8em;
+    color: #aaa;
+}
+
+.downloads-list li .file-size {
+    color: #aaa;
+    font-size: 0.85em;
+}
+
+/* Estilos para la página de podcasts */
+.podcasts-page {
+    margin-bottom: 2em;
+}
+
+.podcasts-page h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+    color: #ddd;
+}
+
+.podcasts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.podcast-item {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.podcast-item:hover {
+    transform: translateY(-5px);
+}
+
+.podcast-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.podcast-item h3 {
+    font-size: 1.2em;
+    margin: 0.8em 0;
+    padding: 0 1em;
+    color: #eee;
+}
+
+.podcast-item p {
+    padding: 0 1em;
+    color: #ccc;
+}
+
+.podcast-item .audio-player {
+    padding: 0 1em 1em;
+}
+
+.podcast-item .audio-player audio {
+    width: 100%;
+}
+
+/* Estilos para la página de YouTube */
+.youtube-page {
+    margin-bottom: 2em;
+}
+
+.youtube-page h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.7em;
+    color: #ddd;
+}
+
+.youtube-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.youtube-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para el menú responsivo */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 0.5em 0;
+        z-index: 10;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5em 1em;
+        text-align: left;
+    }
+  }
