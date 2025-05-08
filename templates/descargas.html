@@ -1,0 +1,22 @@
+# templates/descargas.html (Página de descargas)
+{% extends 'layout.html' %}
+
+{% block title %}Descargas - Portavoz Cantaura{% endblock %}
+
+{% block content %}
+    <section class="downloads-page">
+        <h2>Descargas Exclusivas</h2>
+        <ul class="downloads-list">
+            <li>
+                <i class="fas fa-file-alt"></i>
+                <a href="#">Archivo 1 - Descripción</a>
+                <span class="file-size">1.2 MB</span>
+            </li>
+            <li>
+                <i class="fas fa-file-alt"></i>
+                <a href="#">Archivo 2 - Descripción</a>
+                <span class="file-size">800 KB</span>
+            </li>
+        </ul>
+    </section>
+{% endblock %}
