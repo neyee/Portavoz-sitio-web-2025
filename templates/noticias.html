@@ -1,0 +1,24 @@
+# templates/noticias.html (Página de noticias)
+{% extends 'layout.html' %}
+
+{% block title %}Noticias - Portavoz Cantaura{% endblock %}
+
+{% block content %}
+    <section class="news-page">
+        <h2>Últimas Noticias</h2>
+        <div class="news-list">
+            <article class="news-article">
+                <img src="{{ url_for('serve_static', filename='images/news1.jpg') }}" alt="Noticia 1">
+                <h3>Título de la Noticia 1</h3>
+                <p>Contenido completo de la noticia 1...</p>
+                <span class="date"><i class="far fa-calendar-alt"></i> 15 de Mayo, 2024</span>
+            </article>
+            <article class="news-article">
+                <img src="{{ url_for('serve_static', filename='images/news2.jpg') }}" alt="Noticia 2">
+                <h3>Título de la Noticia 2</h3>
+                <p>Contenido completo de la noticia 2...</p>
+                <span class="date"><i class="far fa-calendar-alt"></i> 14 de Mayo, 2024</span>
+            </article>
+        </div>
+    </section>
+{% endblock %}
